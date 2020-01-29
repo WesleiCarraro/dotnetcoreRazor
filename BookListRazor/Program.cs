@@ -5,6 +5,7 @@ namespace BookListRazor
 {
     public class Program
     {
+        //Aqui onde tudo começa. Precisa do CreateHostBuilder e seu estatico logo abaixo.
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
@@ -15,7 +16,9 @@ namespace BookListRazor
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-					webBuilder.UseIISIntegration();
+					
+                    //Para instalar com o IIS. (pode ser removido)
+                    webBuilder.UseIISIntegration();
                 });
     }
 }

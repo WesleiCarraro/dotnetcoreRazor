@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <Authors>Weslei Carraro</Authors>
     <Company />
-    <Description>App to test .net core 3.0 technology.</Description>
+    <Description>App para testar asp.net core 3.0.</Description>
     <ApplicationIcon />
     <OutputType>WinExe</OutputType>
     <StartupObject />
@@ -30,7 +30,8 @@
 
   <Target Name="AfterPackage" AfterTargets="CopyAllFilesToSingleFolderForPackage" />
   
-  <!--tentativa de evitar o monte de pastas de idiomas diferentes, mas não funfou-->
+  <!--tentativa de evitar o monte de pastas de idiomas diferentes na hora do publish, mas não funfou-->
+  <!--provavel que seja por causa dos scripts js que demandam localization -->
 <ItemGroup>
     <FluentValidationExcludedCultures Include="cs;da;de;es;fa;fi;fr;it;ko;mk;nl;pl;pt;ru;sv;tr;zh-CN">
         <InProject>false</InProject>

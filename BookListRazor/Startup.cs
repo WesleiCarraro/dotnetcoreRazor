@@ -17,7 +17,7 @@ namespace BookListRazor
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
+        //Este método é chamado em tempo de execução. Usado para adicionar os serviços.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
@@ -25,7 +25,7 @@ namespace BookListRazor
             services.AddRazorPages().AddRazorRuntimeCompilation();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        //Este método é chamado em tempo de execução. Usado para configurar o pipeline de request HTTP.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -35,10 +35,10 @@ namespace BookListRazor
             else
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
+            //Esses apps são para fazer a camada de middleware
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
