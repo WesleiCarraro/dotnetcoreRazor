@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using BookListRazor.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -12,8 +9,10 @@ namespace BookListRazor.Controllers
     [ApiController]
     public class BookController : Controller
     {
+        //injeção de dependencia
         private readonly ApplicationDbContext _db;
 
+        //injeção de dependencia
         public BookController(ApplicationDbContext db)
         {
             _db = db;

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using BookListRazor.Model;
 using Microsoft.AspNetCore.Mvc;
@@ -11,8 +9,10 @@ namespace BookListRazor.Pages.BookList
 {
     public class IndexModel : PageModel
     {
+        //injeção de dependencia
         private readonly ApplicationDbContext _db;
 
+        //injeção de dependencia
         public IndexModel(ApplicationDbContext db)
         {
             _db = db;

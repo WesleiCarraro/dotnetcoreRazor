@@ -3,7 +3,7 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:55555",
+      "applicationUrl": "http://localhost:6000",
       "sslPort": 44364
     }
   },
@@ -18,7 +18,7 @@
     "BookListRazor": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:55555;http://localhost:66666",
+      "applicationUrl": "https://localhost:55;http://localhost:66",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

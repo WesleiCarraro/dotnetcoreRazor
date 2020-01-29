@@ -48,7 +48,7 @@
                     <td>
                         @Html.DisplayFor(m => item.Description)
                     </td>
-
+                    
                     <td>
                         <button asp-page-handler="Delete" asp-route-id="@item.Id" onclick="return confirm('Você tem certeza de que quer apagar o livro?')" class="btn btn-danger btn-sm">Apagar</button>
                         <a asp-page="Edit" asp-route-id="@item.Id" class="btn btn-success btn-sm text-white">Alterar</a>
